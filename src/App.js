@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
+import Header from './components/layout/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 

@@ -1,4 +1,4 @@
-
+import {Link} from 'react-router-dom'
 import logo from '../assets/logo.jpg'
 
 function Header() {
@@ -13,10 +13,10 @@ function Header() {
           <nav className=" p-4">
             <ul className="flex text-gray-500 ">
                 <li className="ml-6 mt-6">
-                  Home
+                  <Link to='/'>Home</Link>
                 </li>
               <li className="ml-6 mt-6">
-                About
+                <Link to='/about'>About</Link>
               </li>
             </ul>
           </nav>
