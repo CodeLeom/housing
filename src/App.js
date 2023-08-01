@@ -2,6 +2,8 @@ import { useEffect, useState, useMemo } from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
 
 
 function App() {
@@ -29,11 +31,9 @@ function App() {
       <Router>
         <div className='container'>
           <Header />
-          <h1 className="ml-10 text-3xl font-bold underline">
-           Hello world!
-          </h1>
             <Routes>
-              <Route path='/' />
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
             </Routes>
         </div>
       </Router>
