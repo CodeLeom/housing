@@ -12,10 +12,10 @@ function Header() {
           </div>
           <nav className=" p-4">
             <ul className="flex text-gray-500 ">
-                <li className="md:ml-6 mt-6">
+                <li className="ml-6 mt-6">
                   Home
                 </li>
-              <li className="md:ml-6 mt-6">
+              <li className="ml-6 mt-6">
                 About
               </li>
             </ul>

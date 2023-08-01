@@ -1,8 +1,28 @@
+import { useEffect, useState, useMemo } from 'react';
 import './App.css';
 import Header from './components/Header';
 
 
 function App() {
+  const [houses, setHouses] = useState([])
+
+  useEffect(() => {
+    const fetchHouses = async() => {
+      const res = await fetch('/houses.json')
+      const houseData = await res.json()
+      setHouses(houseData);
+    }
+
+    fetchHouses();
+  }, [])
+
+  useMemo(() => {
+    if (houses.length){
+      const randIndex = Math.floor(Math.random() * houses.length)
+      return houses[randIndex]
+    }
+  }, [houses])
+
   return (
     <>
       <div className='container'>
