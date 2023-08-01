@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 
@@ -25,12 +26,17 @@ function App() {
 
   return (
     <>
-      <div className='container'>
-        <Header />
+      <Router>
+        <div className='container'>
+          <Header />
           <h1 className="ml-10 text-3xl font-bold underline">
            Hello world!
           </h1>
-      </div>
+            <Routes>
+              <Route path='/' />
+            </Routes>
+        </div>
+      </Router>
     </>
   )
 }
