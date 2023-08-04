@@ -4,6 +4,8 @@ import './App.css';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
 import About from './pages/About';
+import SearchResult from './components/SearchResult';
+import HouseFilter from './components/HouseFilter';
 
 
 function App() {
@@ -30,10 +32,12 @@ function App() {
       <Router>
         <div className='container'>
           <Header />
+          <HouseFilter houses={houses} />
           
             <Routes>
               <Route path='/' element={<Home house={featuredHouse} />} />
               <Route path='/about' element={<About />} />
+              <Route path='/searchresults/:city' element={<SearchResult houses={houses} />} />
             </Routes>
         </div>
       </Router>
