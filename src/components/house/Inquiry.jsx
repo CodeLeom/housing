@@ -39,7 +39,7 @@ function Inquiry() {
                 </label>
                 </div>
                 <div className="md:w-2/3">
-                <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-400" id="email" type="email" value={contact.email} placeholder="******************" onChange={onChange} />
+                <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-yellow-400" id="email" type="email" value={contact.email} placeholder="hello@email.com" onChange={onChange} />
                 </div>
             </div>
             <div className="md:flex md:items-center mb-6">

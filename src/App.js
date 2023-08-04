@@ -7,7 +7,7 @@ import About from './pages/About';
 import SearchResult from './components/search/SearchResult';
 import HouseFilter from './components/house/HouseFilter';
 import HouseQuery from './components/house/HouseQuery';
-
+import HouseContext from './context/houseContext';
 
 function App() {
   const [houses, setHouses] = useState([])
@@ -31,17 +31,19 @@ function App() {
   return (
     <>
       <Router>
-        <div className='container'>
-          <Header />
-          <HouseFilter houses={houses} />
-          
-            <Routes>
-              <Route path='/' element={<Home house={featuredHouse} />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/searchresults/:city' element={<SearchResult houses={houses} />} />
-              <Route path='/house/:id' element={<HouseQuery houses={houses} />} />
-            </Routes>
-        </div>
+        <HouseContext.Provider value={houses}>
+          <div className='container'>
+            <Header />
+            <HouseFilter houses={houses} />
+            
+              <Routes>
+                <Route path='/' element={<Home house={featuredHouse} />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/searchresults/:city' element={<SearchResult />} />
+                <Route path='/house/:id' element={<HouseQuery />} />
+              </Routes>
+          </div>
+        </HouseContext.Provider>
       </Router>
     </>
   )
