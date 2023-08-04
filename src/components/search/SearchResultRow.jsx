@@ -8,10 +8,10 @@ function SearchResultRow({house}) {
     }
 
   return (
-    <tr onClick={setActive}>
+    <tr onClick={setActive} className="bg-gray-200 cursor-pointer">
       <td>{house.address}</td>
       <td>$ {house.price}</td>
-      <td>{house.likes}</td>
+      <td className="hidden">{house.likes}</td>
     </tr>
   )
 }
