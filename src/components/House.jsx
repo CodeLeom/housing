@@ -4,7 +4,7 @@ function House({ house }) {
   return (
     <div>
       <div className="grid grid-cols-2 m-4">
-        <h5 className="row-span-12">{house.country}</h5>
+        <h5 className="row-span-12">{house.city}</h5>
       </div>
       <div className="grid grid-cols-2 m-4">
         <h5 className="row-span-12">{house.address}</h5>

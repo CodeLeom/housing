@@ -1,17 +1,17 @@
 
 
 function HouseFilter({allHouses}) {
-    const countries = allHouses 
-    ? Array.from(new Set(allHouses.map((h) => h.country))) 
+    const cities = allHouses 
+    ? Array.from(new Set(allHouses.map((h) => h.city))) 
     : []
 
-    countries.unshift(null)
+    cities.unshift(null)
   return (
     <div className="mt-4">
         <div className="offset-md-2">Look For your Dream House in Abuja</div>
         <div className="mb-2">
             <select name="state" id="state">
-                {countries.map((c) => (
+                {cities.map((c) => (
                     <option key={c} value={c}>
                         {c}
                     </option>
