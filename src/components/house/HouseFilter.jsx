@@ -7,6 +7,8 @@ function HouseFilter({houses}) {
     cities.unshift(null)
 
     const onSearchChange = (e) => {
+        e.preventDefault()
+        
         const city = e.target.value
         navigate(`/searchresults/${city}`)
     }

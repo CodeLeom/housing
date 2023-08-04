@@ -1,4 +1,4 @@
-import House from './House'
+import House from './house/House'
 
 function FeaturedHouse({ house }) {
   if (house)

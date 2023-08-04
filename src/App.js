@@ -4,8 +4,9 @@ import './App.css';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
 import About from './pages/About';
-import SearchResult from './components/SearchResult';
-import HouseFilter from './components/HouseFilter';
+import SearchResult from './components/search/SearchResult';
+import HouseFilter from './components/house/HouseFilter';
+import HouseQuery from './components/house/HouseQuery';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route path='/' element={<Home house={featuredHouse} />} />
               <Route path='/about' element={<About />} />
               <Route path='/searchresults/:city' element={<SearchResult houses={houses} />} />
+              <Route path='/house/:id' element={<HouseQuery houses={houses} />} />
             </Routes>
         </div>
       </Router>
